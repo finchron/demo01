@@ -2,6 +2,7 @@ package com.springboot.demo01.controller;
 
 import com.springboot.demo01.pojo.DeptPOJO;
 import com.springboot.demo01.service.DeptService;
+import com.springboot.demo01.vo.DeptVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,7 +16,7 @@ public class DeptController {
     private DeptService deptService;
 
     @GetMapping("/getDept")
-    public List<DeptPOJO> selectDeptAll() {
+    public List<DeptVO> selectDeptAll() {
         return deptService.selectDeptAll();
     }
 }
